@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grand Hotel - Gestion des réservations</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <h1>Grand Hotel</h1>
+        <nav>
+          <button class="nav-button active" data-view="dashboard">Dashboard</button>
+          <button class="nav-button" data-view="reservations">Réservations</button>
+          <button class="nav-button" data-view="logs">Logs</button>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <h2>Gestion des réservations</h2>
+            <p>Application hors ligne en HTML/JavaScript</p>
+          </div>
+          <label class="upload-button">
+            <input id="file-input" type="file" accept=".xml,text/xml" />
+            Importer XML Opera
+          </label>
+        </header>
+
+        <section id="dashboard" class="view active">
+          <div class="stats-grid">
+            <article class="stat-card">
+              <span>Total réservations</span>
+              <strong id="stats-total">0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Arrivées aujourd'hui</span>
+              <strong id="stats-arrivals">0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Chambres occupées</span>
+              <strong id="stats-rooms">0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Montant total</span>
+              <strong id="stats-amount">0 €</strong>
+            </article>
+          </div>
+
+          <div class="panel">
+            <h3>Réservations récentes</h3>
+            <div id="recent-reservations" class="list"></div>
+          </div>
+        </section>
+
+        <section id="reservations" class="view">
+          <div class="panel">
+            <h3>Liste des réservations</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Client</th>
+                  <th>Chambre</th>
+                  <th>Arrivée</th>
+                  <th>Départ</th>
+                  <th>Statut</th>
+                  <th>Montant</th>
+                </tr>
+              </thead>
+              <tbody id="reservation-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="logs" class="view">
+          <div class="panel">
+            <h3>Journal d'activité</h3>
+            <div id="log-list" class="log-list"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

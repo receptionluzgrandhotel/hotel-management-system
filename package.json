@@ -1,0 +1,17 @@
+{
+  "name": "hotel-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "description": "Système de gestion hôtelière hors ligne - HTML, JavaScript et stockage local",
+  "keywords": [
+    "hotel",
+    "booking",
+    "reservation",
+    "offline",
+    "mvc"
+  ]
+}
